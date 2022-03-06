@@ -68,4 +68,3 @@ Qwiic cable hookup guide:
 ```sh
 python3 shtc3_simpletest.py
 ```
-
