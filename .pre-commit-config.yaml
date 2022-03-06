@@ -6,10 +6,19 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.1.0
     hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-      - id: check-yaml
       - id: check-added-large-files
+      - id: check-ast
+      - id: check-byte-order-marker
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-yaml
+      - id: debug-statements
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
   - repo: https://github.com/fsfe/reuse-tool
     rev: v0.14.0
     hooks:
@@ -18,8 +27,19 @@ repos:
     rev: 22.1.0
     hooks:
       - id: black
+  # Uncomment when this is fixed https://github.com/psf/black/issues/2829
+  # - repo: https://github.com/asottile/blacken-docs
+  #   rev: v1.8.0
+  #   hooks:
+  #     - id: blacken-docs
+  #       additional_dependencies: [black==22.1.0]
   - repo: https://github.com/pycqa/isort
     rev: 5.10.1
     hooks:
       - id: isort
         name: isort (python)
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.7.2
+    hooks:
+    - id: pyupgrade
+      args: [--py36-plus]

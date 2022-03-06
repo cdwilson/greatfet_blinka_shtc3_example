@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # SPDX-FileCopyrightText: 2020 Bryan Siepert for Adafruit Industries
 # SPDX-FileCopyrightText: 2022 Chris Wilson <christopher.david.wilson@gmail.com>
 #
